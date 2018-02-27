@@ -14,5 +14,5 @@ RUN apt-get -y install postgresql-10-plv8
 RUN  wget https://github.com/postgrespro/pg_pathman/archive/1.4.9.tar.gz && \
   tar -xvzf 1.4.9.tar.gz && \
   cd pg_pathman-1.4.9 && make USE_PGXS=1 && make USE_PGXS=1 install && \
-  cd .. && rm -R cd pg_pathman-1.4.9 && \
+  cd .. && rm -R pg_pathman-1.4.9 && \
   rm -rf /var/lib/apt/lists/*
