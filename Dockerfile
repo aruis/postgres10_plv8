@@ -17,5 +17,4 @@ RUN  wget https://github.com/postgrespro/pg_pathman/archive/1.4.9.tar.gz && \
   cd .. && rm -R pg_pathman-1.4.9 && \
   rm -rf /var/lib/apt/lists/*
   
-RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
 ENTRYPOINT sed -i "s/#shared_preload_libraries = ''/shared_preload_libraries = 'pg_pathman'/g" /var/lib/postgresql/data/postgresql.conf
